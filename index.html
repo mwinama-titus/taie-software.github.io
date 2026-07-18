@@ -1,130 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tai-E Software | Ti2Pix - Offline PDF, TIFF & Image Converter for Windows</title>
+    <meta charset="UTF-8">
 
-    <meta name="description"
-    content="Official Tai-E Software website. Download Ti2Pix, a fast and lightweight offline PDF, TIFF and Image Converter for Windows 8, Windows 10 and Windows 11.">
-    
-    <meta name="keywords" content="Ti2Pix, Tai-E Software, PDF Converter, TIFF Converter, Image Converter, Windows Software, Offline Converter">
-    
-    <meta property="og:title" content="Tai-E Software">
-    <meta property="og:description" content="Professional Windows desktop applications developed by Tai-E.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Keep this tag so Google Search Console verification remains active -->
+    <meta
+        name="google-site-verification"
+        content="H7zzqawyhZ7TF8HrU7t2fPlsj2WcquQUQRQDq7x9iO4"
+    >
+
+    <title>Tai-E Software | Free Windows Desktop Applications</title>
+
+    <meta
+        name="description"
+        content="Official Tai-E Software website. Discover lightweight Windows desktop applications including Ti2Pix, an offline PDF, TIFF and image converter for Windows 8, 10 and 11."
+    >
+
+    <meta
+        name="keywords"
+        content="Tai-E Software, Ti2Pix, PDF converter, TIFF converter, image converter, offline converter, Windows software, Windows utilities, freeware"
+    >
+
+    <meta name="author" content="Titus Mwinama">
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://mwinama-titus.github.io/taie-software.github.io/"
+    >
+
+    <!-- Open Graph for WhatsApp, Facebook and Telegram previews -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mwinama-titus.github.io/taie-software.github.io/">
+    <meta property="og:title" content="Tai-E Software">
+    <meta
+        property="og:description"
+        content="Free and reliable Windows desktop applications developed by Tai-E."
+    >
+    <meta
+        property="og:url"
+        content="https://mwinama-titus.github.io/taie-software.github.io/"
+    >
+    <meta property="og:site_name" content="Tai-E Software">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tai-E Software">
+    <meta
+        name="twitter:description"
+        content="Free and reliable Windows desktop applications developed by Tai-E."
+    >
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tai-E Software",
+        "url": "https://mwinama-titus.github.io/taie-software.github.io/",
+        "founder": {
+            "@type": "Person",
+            "name": "Titus Mwinama"
+        },
+        "description": "Tai-E Software develops lightweight and reliable Windows desktop applications."
+    }
+    </script>
 
     <style>
-        body{
-            font-family:Arial,sans-serif;
-            background:#111827;
-            color:white;
-            text-align:center;
-            margin:0;
+        :root {
+            --background: #070b14;
+            --surface: #111827;
+            --surface-light: #172033;
+            --border: #26334c;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --accent: #38bdf8;
+            --text: #f8fafc;
+            --muted: #cbd5e1;
+            --success: #22c55e;
+            --max-width: 1180px;
         }
 
-        header{
-            background:#0f172a;
-            padding:50px 20px;
+        * {
+            box-sizing: border-box;
         }
 
-        h1{
-            font-size:48px;
-            margin-bottom:10px;
+        html {
+            scroll-behavior: smooth;
         }
 
-        p{
-            color:#d1d5db;
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        .btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:14px 30px;
-            background:#2563eb;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
+        a {
+            color: inherit;
         }
 
-        .apps{
-            padding:60px 20px;
+        img {
+            max-width: 100%;
         }
 
-        .card{
-            display:inline-block;
-            width:320px;
-            background:#1f2937;
-            margin:15px;
-            padding:25px;
-            border-radius:12px;
+        .container {
+            width: min(92%, var(--max-width));
+            margin: 0 auto;
         }
 
-        .card h2{
-            margin-top:0;
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 11, 20, 0.96);
+            border-bottom: 1px solid var(--border);
         }
 
-        footer{
-            margin-top:60px;
-            padding:25px;
-            background:#0f172a;
+        .nav {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 100px 0 85px;
+            background:
+                radial-gradient(circle at top right, rgba(37, 99, 235, 0.28), transparent 35%),
+                radial-gradient(circle at left, rgba(56, 189, 248, 0.14), transparent 30%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            border-radius: 999px;
+            color: var(--accent);
+            background: rgba(56, 189, 248, 0.08);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 22px 0 18px;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text {
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 1.12rem;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--accent);
+        }
+
+        .hero-panel {
+            background: linear-gradient(145deg, var(--surface-light), var(--surface));
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 30px;
+        }
+
+        .hero-panel h2 {
+            margin-top: 0;
+        }
+
+        .quick-list {
+            list-style: none;
+            padding: 0;
+            margin: 22px 0 0;
+        }
+
+        .quick-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .quick-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-alt {
+            background: #0b1220;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 42px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 14px;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .app-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .app-card.featured {
+            border-color: rgba(56, 189, 248, 0.5);
+        }
+
+        .app-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.55rem;
+        }
+
+        .app-card p {
+            color: var(--muted);
+            flex-grow: 1;
+        }
+
+        .status {
+            align-self: flex-start;
+            padding: 5px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .status-available {
+            background: rgba(34, 197, 94, 0.12);
+            color: #86efac;
+        }
+
+        .status-soon {
+            background: rgba(148, 163, 184, 0.12);
+            color: #cbd5e1;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 15px;
+            padding: 24px;
+        }
+
+        .feature h3 {
+            margin-top: 0;
+        }
+
+        .feature p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-grid p {
+            color: var(--muted);
+        }
+
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+        }
+
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            color: var(--muted);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .nav {
+                padding: 16px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .hero {
+                padding-top: 70px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
+    <div class="container nav">
+        <a class="brand" href="./">Tai-E <span>Software</span></a>
 
-<h1>Tai-E Software</h1>
-
-<p>Professional Windows Desktop Applications</p>
-
-<a class="btn" href="https://titus-mwinama.itch.io/ti2pix">
-Download Ti2Pix
-</a>
-
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#applications">Applications</a>
+            <a href="#features">Why Tai-E</a>
+            <a href="#about">About</a>
+            <a href="#support">Support</a>
+        </nav>
+    </div>
 </header>
 
-<section class="apps">
+<main>
 
-<div class="card">
-<h2>Ti2Pix</h2>
+    <section class="hero">
+        <div class="container hero-grid">
 
-<p>
-Offline PDF, TIFF and Image Converter with fast batch processing.
-</p>
+            <div>
+                <span class="eyebrow">Windows Desktop Applications</span>
 
-<a class="btn" href="https://titus-mwinama.itch.io/ti2pix">
-Download
-</a>
+                <h1>Simple software.<br><span>Useful results.</span></h1>
 
-</div>
+                <p class="hero-text">
+                    Tai-E Software develops lightweight, reliable and practical
+                    Windows desktop applications for document processing,
+                    productivity and everyday computer tasks.
+                </p>
 
-<div class="card">
-<h2>Coming Soon</h2>
+                <div class="button-row">
+                    <a class="button button-primary" href="ti2pix.html">
+                        Explore Ti2Pix
+                    </a>
 
-<p>
-Tai-E Legal Authorities
-</p>
+                    <a
+                        class="button button-secondary"
+                        href="https://titus-mwinama.itch.io/ti2pix"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Download Ti2Pix
+                    </a>
+                </div>
+            </div>
 
-</div>
+            <aside class="hero-panel">
+                <h2>Ti2Pix v1.2</h2>
 
-<div class="card">
-<h2>Coming Soon</h2>
+                <p>
+                    A fast and completely offline PDF, TIFF and image converter
+                    for Windows.
+                </p>
 
-<p>
-Tai-E AudioForge
-</p>
+                <ul class="quick-list">
+                    <li>PDF pages to high-quality images</li>
+                    <li>Single and multi-page TIFF conversion</li>
+                    <li>Batch image conversion</li>
+                    <li>Windows 8, 10 and 11 support</li>
+                    <li>No internet connection required</li>
+                </ul>
+            </aside>
 
-</div>
+        </div>
+    </section>
 
-</section>
+    <section class="section" id="applications">
+        <div class="container">
 
-<footer>
+            <div class="section-heading">
+                <h2>Tai-E Applications</h2>
+                <p>
+                    Explore software developed to make document management,
+                    conversion and productivity easier on Windows computers.
+                </p>
+            </div>
 
-© 2026 Tai-E • Created by Titus Mwinama
+            <div class="app-grid">
 
+                <article class="app-card featured">
+                    <span class="status status-available">Available</span>
+
+                    <h3>Ti2Pix</h3>
+
+                    <p>
+                        Convert PDF pages, TIFF files and images into high-quality
+                        image formats. Ti2Pix supports batch processing and works
+                        completely offline.
+                    </p>
+
+                    <a class="button button-primary" href="ti2pix.html">
+                        View Ti2Pix
+                    </a>
+                </article>
+
+                <article class="app-card">
+                    <span class="status status-soon">Coming Soon</span>
+
+                    <h3>Tai-E Legal Authorities</h3>
+
+                    <p>
+                        A desktop legal research and authorities management
+                        application designed to organise, search and access legal
+                        documents efficiently.
+                    </p>
+                </article>
+
+                <article class="app-card">
+                    <span class="status status-soon">Coming Soon</span>
+
+                    <h3>Tai-E AudioForge</h3>
+
+                    <p>
+                        A lightweight Windows audio utility for converting and
+                        processing media files through a simple desktop interface.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Why Choose Tai-E Software?</h2>
+                <p>
+                    Our applications focus on practical functionality, privacy,
+                    ease of use and efficient performance.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature">
+                    <h3>Offline First</h3>
+                    <p>
+                        Core functions are designed to work without requiring a
+                        continuous internet connection.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Privacy Focused</h3>
+                    <p>
+                        Local file processing helps users keep private documents
+                        on their own computers.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Easy to Use</h3>
+                    <p>
+                        Clean interfaces and straightforward workflows make the
+                        applications suitable for everyday users.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <h3>Built for Windows</h3>
+                    <p>
+                        Applications are designed for modern Windows desktop
+                        environments and common office workflows.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container about-grid">
+
+            <div>
+                <div class="section-heading">
+                    <h2>About Tai-E Software</h2>
+                </div>
+
+                <p>
+                    Tai-E Software is an independent software brand created by
+                    Titus Mwinama. It focuses on developing practical desktop
+                    applications for document conversion, legal research, media
+                    processing and productivity.
+                </p>
+
+                <p>
+                    The aim is to create lightweight tools that solve real
+                    everyday problems while remaining simple, accessible and
+                    dependable.
+                </p>
+            </div>
+
+            <div class="contact-box" id="support">
+                <h3>Downloads and Support</h3>
+
+                <p>
+                    Download the latest public version of Ti2Pix from its official
+                    itch.io page.
+                </p>
+
+                <div class="button-row">
+                    <a
+                        class="button button-primary"
+                        href="https://titus-mwinama.itch.io/ti2pix"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Official Download
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="https://t.me/+vcd2uXDf1uBiNGNk"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Telegram Channel
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <span>© 2026 Tai-E Software. All rights reserved.</span>
+        <span>Created by Titus Mwinama</span>
+    </div>
 </footer>
 
 </body>
