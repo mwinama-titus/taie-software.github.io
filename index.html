@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Keep this tag so Google Search Console verification remains active -->
+    <!-- Keep this tag for Google Search Console verification -->
     <meta
         name="google-site-verification"
         content="H7zzqawyhZ7TF8HrU7t2fPlsj2WcquQUQRQDq7x9iO4"
@@ -15,12 +15,12 @@
 
     <meta
         name="description"
-        content="Official Tai-E Software website. Discover lightweight Windows desktop applications including Ti2Pix, an offline PDF, TIFF and image converter for Windows 8, 10 and 11."
+        content="Official Tai-E Software website. Discover Ti2Pix and Tai-E OCR, practical Windows applications for PDF conversion, TIFF conversion, image processing and optical character recognition."
     >
 
     <meta
         name="keywords"
-        content="Tai-E Software, Ti2Pix, PDF converter, TIFF converter, image converter, offline converter, Windows software, Windows utilities, freeware"
+        content="Tai-E Software, Tai-E OCR, Ti2Pix, OCR software, optical character recognition, PDF converter, TIFF converter, image converter, offline Windows software, Windows utilities, freeware"
     >
 
     <meta name="author" content="Titus Mwinama">
@@ -31,12 +31,12 @@
         href="https://mwinama-titus.github.io/taie-software.github.io/"
     >
 
-    <!-- Open Graph for WhatsApp, Facebook and Telegram previews -->
+    <!-- Social media preview information -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tai-E Software">
     <meta
         property="og:description"
-        content="Free and reliable Windows desktop applications developed by Tai-E."
+        content="Practical Windows desktop applications, including Ti2Pix and Tai-E OCR, developed by Tai-E."
     >
     <meta
         property="og:url"
@@ -48,10 +48,10 @@
     <meta name="twitter:title" content="Tai-E Software">
     <meta
         name="twitter:description"
-        content="Free and reliable Windows desktop applications developed by Tai-E."
+        content="Practical Windows desktop applications developed by Tai-E."
     >
 
-    <!-- Structured data -->
+    <!-- Organisation structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -62,7 +62,7 @@
             "@type": "Person",
             "name": "Titus Mwinama"
         },
-        "description": "Tai-E Software develops lightweight and reliable Windows desktop applications."
+        "description": "Tai-E Software develops practical Windows desktop applications for document conversion, optical character recognition, legal research and media processing."
     }
     </script>
 
@@ -99,10 +99,6 @@
 
         a {
             color: inherit;
-        }
-
-        img {
-            max-width: 100%;
         }
 
         .container {
@@ -157,13 +153,21 @@
         .hero {
             padding: 100px 0 85px;
             background:
-                radial-gradient(circle at top right, rgba(37, 99, 235, 0.28), transparent 35%),
-                radial-gradient(circle at left, rgba(56, 189, 248, 0.14), transparent 30%);
+                radial-gradient(
+                    circle at top right,
+                    rgba(37, 99, 235, 0.28),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at left,
+                    rgba(56, 189, 248, 0.14),
+                    transparent 30%
+                );
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.35fr 0.65fr;
+            grid-template-columns: 1.25fr 0.75fr;
             gap: 60px;
             align-items: center;
         }
@@ -237,7 +241,11 @@
         }
 
         .hero-panel {
-            background: linear-gradient(145deg, var(--surface-light), var(--surface));
+            background: linear-gradient(
+                145deg,
+                var(--surface-light),
+                var(--surface)
+            );
             border: 1px solid var(--border);
             border-radius: 24px;
             padding: 30px;
@@ -272,7 +280,7 @@
         }
 
         .section-heading {
-            max-width: 760px;
+            max-width: 780px;
             margin-bottom: 42px;
         }
 
@@ -288,7 +296,7 @@
 
         .app-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
 
@@ -355,6 +363,28 @@
             margin-bottom: 0;
         }
 
+        .coming-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .coming-card {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 15px;
+            padding: 24px;
+        }
+
+        .coming-card h3 {
+            margin-top: 12px;
+        }
+
+        .coming-card p {
+            color: var(--muted);
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -401,12 +431,16 @@
                 grid-template-columns: 1fr;
             }
 
-            .app-grid {
-                grid-template-columns: 1fr;
-            }
-
             .feature-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .app-grid,
+            .coming-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -425,10 +459,6 @@
                 padding-top: 70px;
             }
 
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
             .button {
                 width: 100%;
             }
@@ -445,6 +475,7 @@
         <nav class="nav-links" aria-label="Main navigation">
             <a href="#applications">Applications</a>
             <a href="#features">Why Tai-E</a>
+            <a href="#upcoming">Coming Soon</a>
             <a href="#about">About</a>
             <a href="#support">Support</a>
         </nav>
@@ -459,44 +490,43 @@
             <div>
                 <span class="eyebrow">Windows Desktop Applications</span>
 
-                <h1>Simple software.<br><span>Useful results.</span></h1>
+                <h1>
+                    Practical software.<br>
+                    <span>Powerful results.</span>
+                </h1>
 
                 <p class="hero-text">
-                    Tai-E Software develops lightweight, reliable and practical
-                    Windows desktop applications for document processing,
-                    productivity and everyday computer tasks.
+                    Tai-E Software develops lightweight and reliable Windows
+                    desktop applications for document conversion, optical
+                    character recognition, legal research, media processing
+                    and everyday productivity.
                 </p>
 
                 <div class="button-row">
-                    <a class="button button-primary" href="ti2pix.html">
-                        Explore Ti2Pix
+                    <a class="button button-primary" href="taie-ocr.html">
+                        Explore Tai-E OCR
                     </a>
 
-                    <a
-                        class="button button-secondary"
-                        href="https://titus-mwinama.itch.io/ti2pix"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Download Ti2Pix
+                    <a class="button button-secondary" href="ti2pix.html">
+                        Explore Ti2Pix
                     </a>
                 </div>
             </div>
 
             <aside class="hero-panel">
-                <h2>Ti2Pix v1.2</h2>
+                <h2>Available Applications</h2>
 
                 <p>
-                    A fast and completely offline PDF, TIFF and image converter
-                    for Windows.
+                    Download practical Windows utilities developed under the
+                    Tai-E Software brand.
                 </p>
 
                 <ul class="quick-list">
-                    <li>PDF pages to high-quality images</li>
-                    <li>Single and multi-page TIFF conversion</li>
-                    <li>Batch image conversion</li>
-                    <li>Windows 8, 10 and 11 support</li>
-                    <li>No internet connection required</li>
+                    <li>Tai-E OCR – Optical character recognition</li>
+                    <li>Ti2Pix – PDF, TIFF and image conversion</li>
+                    <li>Local Windows desktop processing</li>
+                    <li>Simple and modern interfaces</li>
+                    <li>Free official downloads</li>
                 </ul>
             </aside>
 
@@ -507,10 +537,12 @@
         <div class="container">
 
             <div class="section-heading">
-                <h2>Tai-E Applications</h2>
+                <h2>Available Tai-E Applications</h2>
+
                 <p>
-                    Explore software developed to make document management,
-                    conversion and productivity easier on Windows computers.
+                    Explore our currently available Windows desktop
+                    applications. Each program has its own official information
+                    page and verified download link.
                 </p>
             </div>
 
@@ -519,40 +551,55 @@
                 <article class="app-card featured">
                     <span class="status status-available">Available</span>
 
+                    <h3>Tai-E OCR</h3>
+
+                    <p>
+                        A Windows optical character recognition application for
+                        extracting readable and editable text from scanned
+                        documents, PDF pages and images.
+                    </p>
+
+                    <div class="button-row">
+                        <a class="button button-primary" href="taie-ocr.html">
+                            View Tai-E OCR
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="https://titus-mwinama.itch.io/tai-e-ocr"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="app-card featured">
+                    <span class="status status-available">Available</span>
+
                     <h3>Ti2Pix</h3>
 
                     <p>
-                        Convert PDF pages, TIFF files and images into high-quality
-                        image formats. Ti2Pix supports batch processing and works
-                        completely offline.
+                        A fast and lightweight converter for PDF pages, TIFF
+                        files and common image formats, with support for batch
+                        processing and high-quality output.
                     </p>
 
-                    <a class="button button-primary" href="ti2pix.html">
-                        View Ti2Pix
-                    </a>
-                </article>
+                    <div class="button-row">
+                        <a class="button button-primary" href="ti2pix.html">
+                            View Ti2Pix
+                        </a>
 
-                <article class="app-card">
-                    <span class="status status-soon">Coming Soon</span>
-
-                    <h3>Tai-E Legal Authorities</h3>
-
-                    <p>
-                        A desktop legal research and authorities management
-                        application designed to organise, search and access legal
-                        documents efficiently.
-                    </p>
-                </article>
-
-                <article class="app-card">
-                    <span class="status status-soon">Coming Soon</span>
-
-                    <h3>Tai-E AudioForge</h3>
-
-                    <p>
-                        A lightweight Windows audio utility for converting and
-                        processing media files through a simple desktop interface.
-                    </p>
+                        <a
+                            class="button button-secondary"
+                            href="https://titus-mwinama.itch.io/ti2pix"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Download
+                        </a>
+                    </div>
                 </article>
 
             </div>
@@ -564,43 +611,49 @@
 
             <div class="section-heading">
                 <h2>Why Choose Tai-E Software?</h2>
+
                 <p>
-                    Our applications focus on practical functionality, privacy,
-                    ease of use and efficient performance.
+                    Tai-E applications focus on practical functionality,
+                    privacy, straightforward interfaces and dependable desktop
+                    performance.
                 </p>
             </div>
 
             <div class="feature-grid">
 
                 <article class="feature">
-                    <h3>Offline First</h3>
+                    <h3>Desktop Focused</h3>
+
                     <p>
-                        Core functions are designed to work without requiring a
-                        continuous internet connection.
+                        Applications are designed specifically for Windows
+                        desktop workflows.
                     </p>
                 </article>
 
                 <article class="feature">
                     <h3>Privacy Focused</h3>
+
                     <p>
-                        Local file processing helps users keep private documents
-                        on their own computers.
+                        Local file processing helps users keep documents and
+                        images on their own computers.
                     </p>
                 </article>
 
                 <article class="feature">
                     <h3>Easy to Use</h3>
+
                     <p>
-                        Clean interfaces and straightforward workflows make the
-                        applications suitable for everyday users.
+                        Clear interfaces and simple workflows make the
+                        applications accessible to everyday users.
                     </p>
                 </article>
 
                 <article class="feature">
-                    <h3>Built for Windows</h3>
+                    <h3>Practical Tools</h3>
+
                     <p>
-                        Applications are designed for modern Windows desktop
-                        environments and common office workflows.
+                        Each application is designed to solve a real document,
+                        research or media-processing problem.
                     </p>
                 </article>
 
@@ -608,7 +661,50 @@
         </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section" id="upcoming">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>More Applications Coming Soon</h2>
+
+                <p>
+                    The Tai-E Software collection will continue to grow with
+                    more applications for legal research, audio processing and
+                    productivity.
+                </p>
+            </div>
+
+            <div class="coming-grid">
+
+                <article class="coming-card">
+                    <span class="status status-soon">Coming Soon</span>
+
+                    <h3>Tai-E Legal Authorities</h3>
+
+                    <p>
+                        A desktop legal authorities and research management
+                        application for searching, organising and accessing
+                        legal documents.
+                    </p>
+                </article>
+
+                <article class="coming-card">
+                    <span class="status status-soon">Coming Soon</span>
+
+                    <h3>Tai-E AudioForge</h3>
+
+                    <p>
+                        A Windows media utility for converting and processing
+                        audio and video files through a straightforward desktop
+                        interface.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="about">
         <div class="container about-grid">
 
             <div>
@@ -618,43 +714,43 @@
 
                 <p>
                     Tai-E Software is an independent software brand created by
-                    Titus Mwinama. It focuses on developing practical desktop
-                    applications for document conversion, legal research, media
-                    processing and productivity.
+                    Titus Mwinama. It develops practical desktop applications
+                    for document conversion, optical character recognition,
+                    legal research, media processing and productivity.
                 </p>
 
                 <p>
-                    The aim is to create lightweight tools that solve real
-                    everyday problems while remaining simple, accessible and
-                    dependable.
+                    The aim is to create useful Windows applications that solve
+                    everyday problems while remaining straightforward,
+                    accessible and dependable.
                 </p>
             </div>
 
             <div class="contact-box" id="support">
-                <h3>Downloads and Support</h3>
+                <h3>Downloads and Updates</h3>
 
                 <p>
-                    Download the latest public version of Ti2Pix from its official
-                    itch.io page.
+                    Download Tai-E applications from their official itch.io
+                    pages or follow the Telegram channel for software updates.
                 </p>
 
                 <div class="button-row">
                     <a
                         class="button button-primary"
-                        href="https://titus-mwinama.itch.io/ti2pix"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Official Download
-                    </a>
-
-                    <a
-                        class="button button-secondary"
                         href="https://t.me/+vcd2uXDf1uBiNGNk"
                         target="_blank"
                         rel="noopener"
                     >
                         Telegram Channel
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="https://titus-mwinama.itch.io/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        itch.io Profile
                     </a>
                 </div>
             </div>
