@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mwinama-titus.github.io/taie-software.github.io/sitemap.xml
